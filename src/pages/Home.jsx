@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Stars = () => {
-  const stars = Array.from({ length: 150 }); // زيادة عدد النجوم
+  const stars = Array.from({ length: 150 }); 
   return (
     <>
       {stars.map((_, i) => {
@@ -39,7 +39,7 @@ const Home = () => {
       <Stars />
       <div className="mist"></div>
       
-      {/* الطيارة - متأكدين إنها موجودة */}
+      
       {showPlane && (
         <div className="plane">✈️</div>
       )}

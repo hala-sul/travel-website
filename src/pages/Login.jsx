@@ -15,7 +15,7 @@ const Login = ({ onLogin }) => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  // مستخدمين تجريبيين
+  
   const demoUsers = [
     { email: "admin@voyago.com", password: "admin123", name: "Admin User", role: "admin" },
     { email: "user@voyago.com", password: "user123", name: "Demo User", role: "user" },

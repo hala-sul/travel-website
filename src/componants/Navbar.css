@@ -131,7 +131,7 @@
   transform: translateY(-2px);
 }
 
-/* ========== تصميم الموبايل ========== */
+/* ============== */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

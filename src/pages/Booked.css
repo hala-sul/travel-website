@@ -1,4 +1,4 @@
-/* Booked Page Styles */
+
 .bookings-page {
     min-height: 100vh;
     background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 100%);
@@ -455,7 +455,7 @@
     }
   }
   
-  /* للشاشات الصغيرة جداً */
+  
   @media (max-width: 480px) {
     .bookings-page {
       padding-top: 110px;
