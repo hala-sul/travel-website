@@ -11,14 +11,13 @@
   right: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  flex-wrap: wrap;
 }
 
+/* LEFT */
 .nav-left {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -27,16 +26,15 @@
   background: linear-gradient(135deg, #ffdd00, #ffaa00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
+/* LINKS */
 .nav-item {
   color: #fff;
   text-decoration: none;
   font-size: 0.85rem;
   padding: 0.4rem 0.8rem;
   border-radius: 8px;
-  transition: all 0.3s;
 }
 
 .nav-item:hover {
@@ -48,182 +46,122 @@
   color: #ffdd00;
 }
 
-/* Right Section */
+/* RIGHT */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
+/* BADGES */
 .balance-badge,
 .points-badge,
 .free-trips-badge {
-  display: flex;
-  align-items: center;
-  gap: 4px;
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 0.75rem;
 }
 
 .balance-badge {
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  background: #2ecc71;
   color: white;
 }
 
 .points-badge {
-  background: linear-gradient(135deg, #ffdd00, #ffaa00);
+  background: #ffdd00;
   color: #0a0a23;
-  font-weight: bold;
 }
 
 .free-trips-badge {
-  background: linear-gradient(135deg, #ff6b6b, #ff3366);
+  background: #ff3366;
   color: white;
-  animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-.user-menu {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
+/* USER */
 .user-name {
   color: white;
   font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 10px;
-  border-radius: 20px;
 }
 
-.login-btn {
-  background: linear-gradient(135deg, #1E90FF, #0066CC);
-  color: white;
-  padding: 4px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.75rem;
-  transition: all 0.3s;
-}
-
+/* BUTTONS */
+.login-btn,
 .logout-btn {
-  background: linear-gradient(135deg, #ff6b6b, #ff3366);
-  color: white;
   border: none;
   padding: 4px 10px;
   border-radius: 20px;
+  font-size: 0.75rem;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 0.7rem;
-  transition: all 0.3s;
 }
 
-.login-btn:hover,
-.logout-btn:hover {
-  transform: translateY(-2px);
+.login-btn {
+  background: #1E90FF;
+  color: white;
+  text-decoration: none;
 }
 
-/* ============== */
+.logout-btn {
+  background: #ff3366;
+  color: white;
+}
+
+/* HAMBURGER */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+}
+
+/* MOBILE ITEMS */
+.mobile-item {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-login,
+.mobile-logout {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  background: transparent;
+  color: white;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px 12px;
-    gap: 8px;
-  }
-  
-  .nav-left {
-    justify-content: center;
-    gap: 6px;
-    width: 100%;
-  }
-  
-  .logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-  }
-  
-  .nav-item {
-    padding: 4px 10px;
-    font-size: 0.75rem;
-  }
-  
-  .nav-right {
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-  }
-  
-  .balance-badge,
-  .points-badge,
-  .free-trips-badge {
-    padding: 3px 8px;
-    font-size: 0.7rem;
-  }
-  
-  .user-menu {
-    gap: 5px;
-  }
-  
-  .user-name {
-    font-size: 0.7rem;
-    padding: 3px 8px;
-  }
-  
-  .login-btn {
-    padding: 3px 12px;
-    font-size: 0.7rem;
-  }
-  
-  .logout-btn {
-    padding: 3px 8px;
-    font-size: 0.65rem;
-  }
-}
 
-/* للشاشات الصغيرة جداً */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 8px 10px;
-  }
-  
-  .nav-left {
-    gap: 4px;
-  }
-  
   .nav-item {
-    padding: 3px 8px;
-    font-size: 0.7rem;
+    display: none;
   }
-  
-  .nav-right {
-    gap: 6px;
-    flex-wrap: wrap;
+
+  .menu-icon {
+    display: block;
   }
-  
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 220px;
+    background: #1a1a3e;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
   .balance-badge,
   .points-badge,
-  .free-trips-badge {
-    padding: 2px 6px;
-    font-size: 0.65rem;
-  }
-  
+  .free-trips-badge,
   .user-name {
-    font-size: 0.65rem;
-    padding: 2px 6px;
-  }
-  
-  .login-btn {
-    padding: 2px 10px;
-    font-size: 0.65rem;
+    display: none;
   }
 }
