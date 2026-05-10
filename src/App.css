@@ -1,0 +1,13 @@
+/* لضمان عدم تقطيع المحتوى من فوق */
+.page-container {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+/* لكل الصفحات */
+.trips-container,
+.bookings-page,
+.favorites-page,
+.points-page {
+  padding-top: 100px;
+}

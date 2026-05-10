@@ -1,0 +1,485 @@
+/* responsive.css - لجميع صفحات الموقع */
+
+/* ========== إعدادات عامة للموبايل ========== */
+@media (max-width: 768px) {
+  
+    /* تقليل حجم الخطوط العامة */
+    body {
+      font-size: 14px;
+    }
+    
+    /* تصغير الهيدرز */
+    h1 {
+      font-size: 1.8rem !important;
+    }
+    
+    h2 {
+      font-size: 1.4rem !important;
+    }
+    
+    h3 {
+      font-size: 1.1rem !important;
+    }
+  }
+  
+  /* ========== صفحة Trips (الرحلات) ========== */
+  @media (max-width: 768px) {
+    .trips-container {
+      padding: 100px 15px 30px 15px;
+    }
+    
+    .trips-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .trip-card {
+      padding: 20px 15px;
+    }
+    
+    .trip-icon span {
+      font-size: 40px !important;
+    }
+    
+    .trip-content h3 {
+      font-size: 1.2rem;
+    }
+    
+    .trip-content p {
+      font-size: 0.85rem;
+    }
+    
+    .search-filter input,
+    .search-filter select {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+    
+    .book-btn,
+    .details-btn,
+    .free-book-btn-card {
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+    
+    /* تحسين أزرار القلب */
+    .favorite-btn {
+      width: 35px;
+      height: 35px;
+      font-size: 1.4rem;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  
+  /* ========== صفحة TripDetails ========== */
+  @media (max-width: 768px) {
+    .trip-details-content {
+      padding: 15px;
+    }
+    
+    .hero-slider {
+      border-radius: 15px;
+    }
+    
+    .slider-container {
+      height: 300px;
+    }
+    
+    .slider-title {
+      font-size: 1.3rem;
+    }
+    
+    .slider-description {
+      font-size: 0.8rem;
+      max-width: 100%;
+    }
+    
+    .slider-overlay {
+      padding: 15px;
+    }
+    
+    .slider-prev,
+    .slider-next {
+      width: 30px;
+      height: 30px;
+      font-size: 0.9rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .stat-card {
+      padding: 12px;
+    }
+    
+    .stat-icon {
+      font-size: 1.5rem;
+    }
+    
+    .stat-value {
+      font-size: 1rem;
+    }
+    
+    .stat-label {
+      font-size: 0.65rem;
+    }
+    
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    
+    .places-list {
+      gap: 8px;
+    }
+    
+    .place-item {
+      padding: 10px 15px;
+    }
+    
+    .place-name {
+      font-size: 0.85rem;
+    }
+    
+    .description-card {
+      padding: 20px;
+    }
+    
+    .description-card p {
+      font-size: 0.9rem;
+    }
+    
+    .booking-card-glass {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .booking-buttons {
+      width: 100%;
+    }
+    
+    .book-btn-glow,
+    .free-book-btn {
+      padding: 12px 20px;
+      font-size: 0.9rem;
+    }
+    
+    .price-big .amount {
+      font-size: 2rem;
+    }
+    
+    .comments-section {
+      padding: 20px;
+    }
+    
+    .comment-card {
+      padding: 12px;
+    }
+    
+    .comment-user {
+      font-size: 0.85rem;
+    }
+    
+    .comment-text {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* ========== صفحة Bookings (الحجوزات) ========== */
+  @media (max-width: 768px) {
+    .bookings-container {
+      margin: 80px auto 30px;
+      padding: 15px;
+    }
+    
+    .bookings-header h1 {
+      font-size: 1.6rem;
+    }
+    
+    .booking-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+      gap: 12px;
+    }
+    
+    .card-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+    }
+    
+    .card-header {
+      justify-content: center;
+    }
+    
+    .card-header h3 {
+      font-size: 1rem;
+    }
+    
+    .card-details {
+      justify-content: center;
+      gap: 12px;
+    }
+    
+    .detail {
+      font-size: 0.8rem;
+    }
+    
+    .cancel-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 8px 16px;
+    }
+    
+    .total-card {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+      padding: 20px;
+    }
+    
+    .total-left {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .total-amount {
+      font-size: 1.5rem;
+    }
+    
+    .empty-state {
+      padding: 40px 20px;
+    }
+    
+    .empty-emoji {
+      font-size: 2.5rem;
+    }
+    
+    .empty-state h2 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* ========== صفحة Favorites ========== */
+  @media (max-width: 768px) {
+    .favorites-container {
+      padding: 15px;
+    }
+    
+    .favorites-header h1 {
+      font-size: 1.6rem;
+    }
+    
+    .favorites-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .favorite-card {
+      margin: 0;
+    }
+    
+    .card-body {
+      padding: 15px;
+    }
+    
+    .card-body h3 {
+      font-size: 1rem;
+    }
+    
+    .card-body p {
+      font-size: 0.85rem;
+    }
+    
+    .card-stats {
+      gap: 10px;
+    }
+    
+    .stat {
+      font-size: 0.8rem;
+    }
+    
+    .card-actions {
+      flex-direction: column;
+    }
+    
+    .book-fav-btn,
+    .details-fav-btn {
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+    
+    .action-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .action-icon {
+      font-size: 2rem;
+    }
+    
+    .action-card h3 {
+      font-size: 1rem;
+    }
+    
+    .action-card p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* ========== صفحة Points ========== */
+  @media (max-width: 768px) {
+    .points-container {
+      padding: 15px;
+    }
+    
+    .points-header h1 {
+      font-size: 1.6rem;
+    }
+    
+    .points-display {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .points-circle,
+    .free-trips-display {
+      width: 110px;
+      height: 110px;
+    }
+    
+    .points-big,
+    .free-big {
+      font-size: 2rem;
+    }
+    
+    .steps-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .step-card {
+      padding: 20px;
+    }
+    
+    .step-icon {
+      font-size: 2rem;
+    }
+    
+    .step-card h3 {
+      font-size: 1rem;
+    }
+    
+    .step-card p {
+      font-size: 0.85rem;
+    }
+    
+    .stats-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    
+    .stat-card-mini {
+      padding: 12px;
+    }
+    
+    .stat-mini-icon {
+      font-size: 1.3rem;
+    }
+    
+    .stat-mini-value {
+      font-size: 1rem;
+    }
+    
+    .cta-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .recent-item {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .recent-name {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* ========== صفحة Home ========== */
+  @media (max-width: 768px) {
+    .home-content {
+      width: 90%;
+      padding: 25px 20px;
+    }
+    
+    .home-content h1 {
+      font-size: 1.5rem;
+    }
+    
+    .home-content p {
+      font-size: 0.9rem;
+    }
+    
+    .explore-btn {
+      padding: 10px 25px;
+      font-size: 1rem;
+    }
+    
+    .plane {
+      font-size: 40px;
+      animation-duration: 12s;
+    }
+  }
+  
+  /* ========== صفحة Login ========== */
+  @media (max-width: 768px) {
+    .login-page {
+      padding-top: 100px;
+    }
+    
+    .login-card {
+      padding: 25px 20px;
+      margin: 15px;
+    }
+    
+    .logo-icon {
+      font-size: 3rem;
+    }
+    
+    .login-header h1 {
+      font-size: 1.5rem;
+    }
+    
+    .demo-buttons {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .demo-btn {
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+    
+    .form-group label {
+      font-size: 0.8rem;
+    }
+    
+    .input-icon input {
+      padding: 10px 15px 10px 40px;
+      font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  }
