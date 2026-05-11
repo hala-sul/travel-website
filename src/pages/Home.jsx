@@ -101,8 +101,8 @@ const Home = () => {
       <div className="mist"></div>
 
       {/* ✈️ الطيارة */}
-      <div className="plane">✈️</div>
-
+      
+<div className="plane">✈️</div>
       <div className="home-content">
         <h1>Welcome to Voyago</h1>
         <p>Explore hundreds of amazing trips!</p>

@@ -1,49 +1,53 @@
-/* Navbar Base */
+/* =======================
+   NAVBAR MODERN CLEAN
+======================= */
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 100%);
-  padding: 0.8rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: 70px;
+  padding: 0 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 35, 0.92);
+  backdrop-filter: blur(12px);
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* LEFT */
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 12px;
 }
 
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #ffdd00, #ffaa00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffdd00;
 }
 
 /* LINKS */
 .nav-item {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 0.85rem;
-  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  padding: 6px 10px;
   border-radius: 8px;
+  transition: 0.2s;
 }
 
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.08);
 }
 
 .nav-item.active {
-  background: rgba(255, 221, 0, 0.2);
   color: #ffdd00;
+  background: rgba(255,221,0,0.12);
 }
 
 /* RIGHT */
@@ -53,13 +57,18 @@
   gap: 10px;
 }
 
-/* BADGES */
+/* 💰⭐ STATS (IMPORTANT) */
 .balance-badge,
 .points-badge,
 .free-trips-badge {
-  padding: 4px 10px;
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 12px;
   font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .balance-badge {
@@ -80,23 +89,22 @@
 /* USER */
 .user-name {
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 /* BUTTONS */
 .login-btn,
 .logout-btn {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
   border: none;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
   cursor: pointer;
 }
 
 .login-btn {
-  background: #1E90FF;
+  background: #1e90ff;
   color: white;
-  text-decoration: none;
 }
 
 .logout-btn {
@@ -112,34 +120,13 @@
   cursor: pointer;
 }
 
-/* MOBILE MENU */
-.mobile-menu {
-  display: none;
-}
+/* =======================
+   MOBILE
+======================= */
 
-/* MOBILE ITEMS */
-.mobile-item {
-  display: block;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.mobile-login,
-.mobile-logout {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  text-align: left;
-  background: transparent;
-  color: white;
-}
-
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-  .nav-item {
+  .nav-left .nav-item {
     display: none;
   }
 
@@ -147,21 +134,114 @@
     display: block;
   }
 
-  .mobile-menu {
-    display: block;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 220px;
-    background: #1a1a3e;
-    border-radius: 10px;
-    overflow: hidden;
+  /* 🔥 KEEP STATS VISIBLE BUT SMALL */
+  .balance-badge,
+  .points-badge {
+    font-size: 0.65rem;
+    padding: 4px 8px;
   }
 
-  .balance-badge,
-  .points-badge,
-  .free-trips-badge,
+  .free-trips-badge {
+    display: none; /* optional */
+  }
+
   .user-name {
     display: none;
+  }
+
+  .nav-right {
+    gap: 6px;
+  }
+}
+/* =======================
+   MOBILE MENU (MODERN DRAWER)
+======================= */
+
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 260px;
+  height: calc(100vh - 70px);
+  background: rgba(20, 20, 43, 0.98);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 8px;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  animation: slideIn 0.25s ease;
+  z-index: 999;
+}
+
+/* LINKS */
+.mobile-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.mobile-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* 🔥 STATS INSIDE MENU (CLEAN CARD) */
+.mobile-stats {
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.mobile-balance {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.mobile-points {
+  color: #ffdd00;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+.mobile-login,
+.mobile-logout {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.mobile-login {
+  background: #1e90ff;
+  color: white;
+}
+
+.mobile-logout {
+  background: #ff3366;
+  color: white;
+}
+
+/* ANIMATION */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
