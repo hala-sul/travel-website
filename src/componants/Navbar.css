@@ -39,6 +39,7 @@
   padding: 6px 10px;
   border-radius: 8px;
   transition: 0.2s;
+  display: inline-block; /* تأكيد أن العنصر يظهر بشكل طبيعي */
 }
 
 .nav-item:hover {
@@ -54,10 +55,11 @@
 .nav-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end; /* محاذاة العناصر لليمين بشكل أفضل */
   width: 100%;
   margin-top: 8px;
   gap: 8px;
+  position: relative; /* لربط عنصر القائمة المطلق */
 }
 
 /* STATS */
@@ -96,6 +98,8 @@
   font-size: 0.8rem;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .login-btn {
@@ -110,50 +114,53 @@
 
 /* MENU ICON */
 .menu-icon {
-  display: none;
+  display: none; /* مخفي افتراضياً */
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
+  margin-left: 8px; /* مسافة بسيطة */
 }
 
 /* =======================
-   MOBILE
+   RESPONSIVE (الجزء المُصحح)
 ======================= */
-/* 
-@media (max-width: 768px) {
 
-  .nav-item {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .balance-badge,
-  .points-badge {
-    font-size: 0.65rem;
-    padding: 4px 8px;
-  }
-
-  .free-trips-badge,
-  .user-name {
-    display: none;
-  }
-} */
+/* عرض على الأجهزة المتوسطة والصغيرة */
 @media (max-width: 900px) {
+  /* إخفاء الروابط العادية */
   .nav-item {
     display: none !important;
   }
 
+  /* إظهار زر القائمة */
   .menu-icon {
     display: block !important;
-    position: absolute;
-    right: 16px;
-    top: 18px;
-    font-size: 28px;
-    color: white;
-    z-index: 9999;
+  }
+}
+
+/* تحسينات إضافية للشاشات الصغيرة جداً (موبايل) */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  /* تصغير حجم البادجات لتناسب الشاشة */
+  .balance-badge,
+  .points-badge,
+  .free-trips-badge {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  /* إخفاء اسم المستخدم النصي على الموبايل لضيق المساحة */
+  .user-name {
+    display: none;
+  }
+  
+  /* تصغير أزرار الدخول والخروج */
+  .login-btn, .logout-btn {
+    padding: 4px 10px;
+    font-size: 0.75rem;
   }
 }
 
@@ -211,6 +218,7 @@
   font-size: 0.9rem;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
 }
 
 .mobile-login {
