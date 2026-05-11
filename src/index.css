@@ -261,3 +261,13 @@ body {
     display: none !important;
   }
 }
+/* حل نهائي للموبايل */
+@media only screen and (max-device-width: 1000px), only screen and (max-width: 1000px) {
+  .navbar .nav-item {
+    display: none !important;
+  }
+  .navbar .menu-icon {
+    display: block !important;
+    font-size: 32px !important;
+  }
+}
