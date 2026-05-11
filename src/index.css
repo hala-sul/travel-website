@@ -139,3 +139,57 @@ body {
 .trips-container {
   padding-top: 100px;
 }
+/* ========== FIX: FORCE MOBILE NAVBAR ========== */
+@media (max-width: 900px) {
+  /* إخفاء جميع روابط桌面版 */
+  .nav-item {
+    display: none !important;
+  }
+  
+  /* إظهار زر القائمة */
+  .menu-icon {
+    display: block !important;
+  }
+  
+  /* تعديل تنسيق الناف بار عشان يصير مرتب */
+  .nav-right {
+    gap: 6px !important;
+  }
+  
+  /* تصغير حجم البادجات عشان يضل في مكان */
+  .balance-badge,
+  .points-badge {
+    padding: 4px 8px !important;
+    font-size: 0.7rem !important;
+  }
+  
+  /* إخفاء الفري تريب بادج إذا ضيق */
+  .free-trips-badge {
+    display: none !important;
+  }
+  
+  /* تصغير أزرار الدخول والخروج */
+  .login-btn,
+  .logout-btn {
+    padding: 4px 8px !important;
+    font-size: 0.7rem !important;
+  }
+}
+
+/* للموبايل الصغير جداً */
+@media (max-width: 550px) {
+  /* إخفاء نقط البداية (Point badge) كمان إذا لزم */
+  .points-badge {
+    display: none !important;
+  }
+  
+  /* إخفاء اسم المستخدم */
+  .user-name {
+    display: none !important;
+  }
+  
+  /* خلّي المسافات منيحة */
+  .navbar {
+    padding: 8px 12px !important;
+  }
+}

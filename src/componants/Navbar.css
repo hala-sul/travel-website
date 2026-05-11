@@ -1,5 +1,5 @@
 /* =======================
-   NAVBAR BASE (CLEAN)
+   NAVBAR BASE
 ======================= */
 
 .navbar {
@@ -17,7 +17,6 @@
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* TOP ROW */
 .nav-left {
   display: flex;
   align-items: center;
@@ -31,7 +30,6 @@
   color: #ffdd00;
 }
 
-/* LINKS (desktop) */
 .nav-item {
   color: white;
   text-decoration: none;
@@ -39,7 +37,6 @@
   padding: 6px 10px;
   border-radius: 8px;
   transition: 0.2s;
-  display: inline-block; /* تأكيد أن العنصر يظهر بشكل طبيعي */
 }
 
 .nav-item:hover {
@@ -51,18 +48,15 @@
   background: rgba(255,221,0,0.12);
 }
 
-/* RIGHT */
 .nav-right {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* محاذاة العناصر لليمين بشكل أفضل */
+  justify-content: flex-end;
   width: 100%;
   margin-top: 8px;
   gap: 8px;
-  position: relative; /* لربط عنصر القائمة المطلق */
 }
 
-/* STATS */
 .balance-badge,
 .points-badge,
 .free-trips-badge {
@@ -90,7 +84,6 @@
   color: white;
 }
 
-/* BUTTONS */
 .login-btn,
 .logout-btn {
   padding: 6px 12px;
@@ -99,7 +92,6 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
 }
 
 .login-btn {
@@ -112,62 +104,25 @@
   color: white;
 }
 
-/* MENU ICON */
 .menu-icon {
-  display: none; /* مخفي افتراضياً */
+  display: none;
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
-  margin-left: 8px; /* مسافة بسيطة */
 }
 
-/* =======================
-   RESPONSIVE (الجزء المُصحح)
-======================= */
-
-/* عرض على الأجهزة المتوسطة والصغيرة */
+/* ========== الحل الحاسم للموبايل ========== */
 @media (max-width: 900px) {
-  /* إخفاء الروابط العادية */
   .nav-item {
     display: none !important;
   }
-
-  /* إظهار زر القائمة */
+  
   .menu-icon {
     display: block !important;
   }
 }
 
-/* تحسينات إضافية للشاشات الصغيرة جداً (موبايل) */
-@media (max-width: 600px) {
-  .navbar {
-    padding: 8px 12px;
-  }
-
-  /* تصغير حجم البادجات لتناسب الشاشة */
-  .balance-badge,
-  .points-badge,
-  .free-trips-badge {
-    padding: 4px 8px;
-    font-size: 0.7rem;
-  }
-
-  /* إخفاء اسم المستخدم النصي على الموبايل لضيق المساحة */
-  .user-name {
-    display: none;
-  }
-  
-  /* تصغير أزرار الدخول والخروج */
-  .login-btn, .logout-btn {
-    padding: 4px 10px;
-    font-size: 0.75rem;
-  }
-}
-
-/* =======================
-   MOBILE MENU (CLEAN DRAWER)
-======================= */
-
+/* ========== MOBILE MENU ========== */
 .mobile-menu {
   position: fixed;
   top: 70px;
@@ -184,7 +139,6 @@
   animation: slideIn 0.2s ease;
 }
 
-/* ITEMS */
 .mobile-item {
   padding: 12px;
   border-radius: 10px;
@@ -198,17 +152,6 @@
   background: rgba(255,255,255,0.08);
 }
 
-/* STATS INSIDE MENU */
-.mobile-stats {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  font-size: 0.85rem;
-}
-
-/* BUTTONS */
 .mobile-login,
 .mobile-logout {
   margin-top: auto;
@@ -231,7 +174,6 @@
   color: white;
 }
 
-/* ANIMATION */
 @keyframes slideIn {
   from {
     transform: translateX(100%);
